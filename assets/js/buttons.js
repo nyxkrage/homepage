@@ -11,7 +11,8 @@ const generateFirstButtonsContainer = () => {
           target="${CONFIG.openInNewTab ? '_blank' : ''}"
           class="card button button__${button.id}"
         >
-          <i class="buttonIcon" icon-name="${button.icon}"></i>
+          <i class="buttonIcon ${button.icon}"></i>
+          <span>${button.name}</span>
         </a>
     `;
 
@@ -40,17 +41,8 @@ const generateSecondButtonsContainer = () => {
 };
 
 const generateButtons = () => {
-	switch (CONFIG.bentoLayout) {
-		case 'bento':
-			generateFirstButtonsContainer();
-			break;
-		case 'buttons':
-			generateFirstButtonsContainer();
-			generateSecondButtonsContainer();
-			break;
-		default:
-			break;
-	}
+		generateFirstButtonsContainer();
+		//generateSecondButtonsContainer();
 };
 
 generateButtons();
