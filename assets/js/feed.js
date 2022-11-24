@@ -15,7 +15,6 @@ const generateFeed = () => {
             if (post.in_reply_to_id !== null) {
                 continue
             }
-            console.dir(post)
             let postContainer = `
             <div class="feedPost">
                 <div class="postHeader">

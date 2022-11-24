@@ -8,7 +8,7 @@ const generateFirstButtonsContainer = () => {
 		let item = `
         <a
           href="${button.link}"
-		  ${button.rel ?? `rel="${button.rel}"`}
+		  ${button.rel === undefined ? "" : `rel="${button.rel}"`}
           target="${CONFIG.openInNewTab ? '_blank' : ''}"
           class="card button button__${button.id}"
         >
