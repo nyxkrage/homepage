@@ -14,7 +14,7 @@ const CONFIG = {
 	imageBackground: true,
 	openInNewTab: false,
 
-	mastodonFeed: 'm.pid1.sh',
+	mastodonFeed: 'https://m.pid1.sh/api/v1/accounts/109325343301176112/statuses?exclude_replies=true',
 
 	// ┌┐ ┬ ┬┌┬┐┌┬┐┌─┐┌┐┌┌─┐
 	// ├┴┐│ │ │  │ │ ││││└─┐

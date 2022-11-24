@@ -1,5 +1,5 @@
 getLatestPosts = async (urls) => {
-    const res = await fetch(`https://${CONFIG.mastodonFeed}/api/v1/timelines/public?remote=false&only_media=false`, {
+    const res = await fetch(CONFIG.mastodonFeed, {
         "headers": {
             "Accept": "application/json",
         },
@@ -11,7 +11,10 @@ getLatestPosts = async (urls) => {
 const generateFeed = () => {
     const position = 'beforeend';
     getLatestPosts().then(posts => {
-        for (const post of posts) {
+        for (let post of posts) {
+            if (post.reblog !== null) {
+                post = post.reblog
+            }
             if (post.in_reply_to_id !== null) {
                 continue
             }
