@@ -20,8 +20,15 @@ const generateFeed = () => {
             <div class="feedPost">
                 <div class="postHeader">
                     <img class="postAvatar" src="${post.account.avatar_static}"/>
-                    <a href="${post.account.url}">${post.account.acct}</a>
-                    <a class="postLink" href="${post.url}"><i class="ph-link"></i></a>
+                    <a 
+                      href="${post.account.url}"
+                      target="${CONFIG.openInNewTab ? '_blank' : ''}"
+                    >${post.account.acct}</a>
+                    <a 
+                      class="postLink"
+                      href="${post.url}"
+                      target="${CONFIG.openInNewTab ? '_blank' : ''}"
+                    ><i class="ph-link"></i></a>
                 </div>
                 <div>${post.content}</div>
                 ${

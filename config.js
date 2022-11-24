@@ -34,9 +34,10 @@ const CONFIG = {
 		},
 		{
 			id: '3',
-			name: 'Mastodon Instance',
+			name: 'Mastodon',
 			icon: 'ph-chats',
-			link: 'https://m.pid1.sh',
+			rel: 'me',
+			link: 'https://m.pid1.sh/users/nyx',
 		},
 		{
 			id: '4',
@@ -52,9 +53,9 @@ const CONFIG = {
 		},
 		{
 			id: '6',
-			name: 'Feed',
-			icon: 'ph-rss',
-			link: 'https://m.pid1.sh/users/nyx.rss',
+			name: 'Twitter',
+			icon: 'ph-twitter-logo',
+			link: 'https://nitter.it/nyxkrage',
 		},
 	],
 };
